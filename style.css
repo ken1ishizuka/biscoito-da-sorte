@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+    padding: 1.6rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: #34355B;
+
+    animation: gradient 6s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+p, button {
+    font-family: 'DM Sans', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    background: #ffffff;
+    border-radius: .4rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8)
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    max-width: 24rem;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.fortune-msg {
+    background: #E4EDF1;
+    color: #000000;
+    padding: 1rem;
+    max-width: 30rem;
+    box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+    animation-name: growToUp;
+    animation-duration: 2s;
+}
+
+@keyframes growToUp {
+    0% {
+        transform: translateY(120px) scale(0.2);
+    }
+
+    100% {
+        transform: translateY(0) scale(1.0);
+    }
+  }
+
+.closed-cookie {
+    cursor: pointer;
+}
+
+.closed-cookie:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+button {
+    padding: 1.6rem;
+    border: 0;
+    border-radius: .4rem;
+    background: #FF9500;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    align-self: center;
+}
+
+.hide {
+    display: none;
+}
+
